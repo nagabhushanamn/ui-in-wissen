@@ -1,0 +1,88 @@
+
+
+-----------------------------------------------------
+
+problems with js-development without module standard & loader
+
+    => global naming collisions
+
+            soln: using self-executable function
+
+    => loading dependency modules in order is manual
+
+soln:
+
+    ==> using module standards & loaders
+
+-----------------------------------------------------   
+from third parties
+-----------------------------------------------------  
+
+    => AMD ( Async Module Definition )
+    => UMD
+    => commonJS ( most used js module standard)
+
+
+-----------------------------------------------------  
+commonJS module standard
+-----------------------------------------------------  
+
+
+=> every .js file is module by default
+=> any var(s) /function(s) in .js file  are 'private' by default
+=> to abstract/export any member(s), use 'module.exports' object
+=> to require/import any module , use 'require()'
+=> group replated modules into package with description file 'package.json'
+
+
+imp-note : Node.js runtime already implemented this standard as default module standard
+
+
+
+-----------------------------------------------------  
+NPM ( node package manager )
+-----------------------------------------------------  
+
+ --> cli tool
+
+
+ why we need ?
+
+    => to publish/install javascript packages from NPM repository
+
+
+
+-----------------------------------------------------   
+Tools : Module bundler/loaders
+-----------------------------------------------------  
+
+why we need ?
+
+    ==> transpile / compile  --> babel
+    ==> linting              --> ESLint 
+   
+    webpack
+    ==> bundling 
+    ==> minification         --> uglify plugin
+
+
+how to acheive ?
+
+    ==> using webpack + babel + ESLint
+
+-----------------------------------------------------   
+from ECMACScript spec
+-----------------------------------------------------  
+
+
+ES modules
+
+
+=> every .js file is module by default
+=> any var(s) /function(s) in .js file  are 'private' by default
+=> to abstract/export any member(s), use 'export' keyword
+=> to require/import any module , use 'import' keyword
+=> group replated modules into package with description file 'package.json'
+
+
+

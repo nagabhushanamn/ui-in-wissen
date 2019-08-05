@@ -1,0 +1,93 @@
+
+
+
+
+http://crockford.com/javascript/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://exploringjs.com/es6/index.html
+http://javascript.info/
+http://latentflip.com/loupe/
+
+
+
+
+-------------------------------------------------------
+why javascript ?
+
+=> UI application i.e Web-UI ( with browser's JS-engine/runtime)
++
+=> server-side appln ( Node.js )
+
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+javascript features
+
+=> dynamic types 
+=> FP + OOP
+
+=> by default in javascript, Non-blocking/Asyncronous IO
+=> single-thread process
+
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+
+javascript is based 'ECMAScript' spec
+
+latest version : ECMAScript-2015  / ES6
+
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+
+How to run javascript program ?
+
+==> using javascript-runtime
+
+
+in browser envi
+
+1. chrome    ( v8 ==> c++ )
+2. firefox   ( rhino/spider-monkey ==> java )
+3. IE / Edge ( chakra )
+4. Safari    ( nitro )
+...
+
+
+other envi
+
+1. Node.js   ( v8 )
+2. JVM       ( rhino / Nashorn )
+...
+
+
+---------------------------------------------------------
+"Hello! World"
+---------------------------------------------------------
+
+
+
+-------------------------------------------------------
+Javascript / Typescript sTopics
+-------------------------------------------------------
+Level-1
+    - data-types
+    - scopes
+    - FP & OOP
+Level-2
+    - ES6 new syntax & apis
+    - ES modules
+    - Module bundlers & loaders
+Level-3
+    - Concurrency model & Event-Loop
+    - Async Programming
+    - Promise & RxJS APIs
+Level-4
+    - Unit-Testing
+    - design principles & patterns
+
+--------------------------------------------------------

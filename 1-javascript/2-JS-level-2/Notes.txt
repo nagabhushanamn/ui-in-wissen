@@ -1,0 +1,21 @@
+
+
+-------------------------------
+ES6 : new syntax & features
+-------------------------------
+
+
+1. let & const keywords with block scope
+2. function with default & rest parameters
+3. OOP using class-syntax
+4. arrow functions 
+5. obj-literal enhanacements
+6. de-structuring
+7. spread operator
+8. iterable objects & for-of loop
+9. set  & map collections
+...
+
+10. JS modules
+
+    i.e how to organize code as modules & packages
