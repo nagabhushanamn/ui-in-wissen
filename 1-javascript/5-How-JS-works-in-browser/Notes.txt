@@ -1,4 +1,7 @@
 
+How javascript works in browser ?
+javascript concurrency model / Event Loop ?
+
 -----------------------------------------------
 => single-thread process
 => by default in javascript, Non-blocking/Asyncronous IO
@@ -6,7 +9,7 @@
 
 browser  e.g chrome
 
-1. javascript  runtime/engine   -> based on ECMAScript spec
+1. javascript runtime/engine ( v8 )   -> based on ECMAScript spec
 
     a. call-stack  ==> to execute function/scope/context
     b. heap        ==> to hold objects

@@ -3,7 +3,7 @@
 
 function doTeach() {
     try {
-        let tnr = "Nag"; // will move to heap
+        let tnr = "Nag"; // move this var to heap
         console.log(tnr + " teaching javascript")
         if (1 === 2) {
             throw new Error("hate javascript")

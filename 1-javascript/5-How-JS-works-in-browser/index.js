@@ -39,7 +39,7 @@ console.log("-index.js-")
 
 /*
     <button class="veg">Veg-1</button>
-    <button class="veg">Veg-1</button>
+    <button class="veg">Veg-2</button>
     <button class="non-veg">Non-Veg</button>
 */
 
@@ -67,25 +67,31 @@ console.log("-index.js-")
 // ---------------------------------------
 
 
-console.log('init...')
+// console.log('init...')
 
-// IO
-setTimeout(function () {
-    console.log('after IO / timeout')
-}, 1000)
+// // IO
+// setTimeout(function () {
+//     console.log('after IO / timeout')
+// }, 0)
 
-console.log("cont.. with other work..")
+// console.log("cont.. with other work..")
 
 // var i = 0;
 // function longRunning() {
-//     while (i < 100000000000) {
+//     while (i < 100000) {
 //         i++;
 //     }
 // }
 // longRunning();
 
 
-let worker = new Worker("long-script.js");
-worker.addEventListener('message', e => {
-    console.log(e)
-})
+
+
+
+
+
+// let worker = new Worker("long-script.js");
+// worker.addEventListener('message', e => {
+//     console.log(e)
+// })
+// console.log("main thread can cont with other work..");

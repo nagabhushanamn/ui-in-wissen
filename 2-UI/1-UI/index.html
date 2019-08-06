@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <hr />
+    <h1>web UI</h1>
+    <hr />
+
+    <div id="my-box" class="alert alert-danger">
+        <input id="my-inp" type="number" onchange="handleChange(event)" />
+        <hr />
+        <span id="dispEle" class="badge badge-dark">0</span>
+    </div>
+
+
+
+    
+    <script>
+        let myInp = document.getElementById('my-inp')
+
+        // let count = 0;
+        // setInterval(() => {
+        //     count++;
+        //     myInp.value = count; // #my-inp element 'value' state change
+        // }, 2000)
+
+        function handleChange(e) {
+            let value = e.target.value;
+            document.getElementById("dispEle").innerHTML = value
+        }
+
+    </script>
+
+    <hr />
+    <span id="timeEle" class="badge badge-danger">time</span>
+    <hr />
+    <button id="todos-btn" class="btn btn-dark">Load top-5 todos</button>
+    &nbsp;
+    <select id="selectCountEle">
+        <option>5</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>50</option>
+    </select>
+    &nbsp;
+    <input size="3" id="inpCountEle" />
+    <hr />
+    <ul id="todos">
+
+    </ul>
+    <hr />
+    <button id="startBtn" class="btn btn-info">start</button>
+    <button id="stopBtn" class="btn btn-info">stop</button>
+    <hr />
+    <img id="pandaEle" src="./images/1.jpeg" />
+    <hr />
+    <div class="alert alert-info">welcome to web ui world</div>
+    <button class="btn btn-danger">hide</button>
+    <button class="btn btn-success">show</button>
+    <button class="btn btn-primary">what Next?</button>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
