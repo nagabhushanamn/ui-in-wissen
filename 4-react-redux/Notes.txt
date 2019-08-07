@@ -1,0 +1,78 @@
+
+
+------------------------------------------
+
+
+steps to do state management with redux-lib
+
+
+UI  ==>  Eat-IT
+
+
+
+//---------------------------------------------
+step-1 : identify state/model/data(s) & r/s b/w them, 
+         that represents UI
+//---------------------------------------------
+
+ - items
+ - reviews
+ - cart
+ - orders
+ - user
+ ......
+
+
+//---------------------------------------------
+step-2 : identify action(s) which cause state change
+//---------------------------------------------
+
+ - LOAD_ITEMS
+ - LOAD_REVIEWS
+ - ADD_NEW_REVIEW
+ - BUY
+ - CHECKOUT
+ - LOGIN
+
+ - REQUEST_BEGIN
+ - REQUEST_SUCCESS
+ - REQUEST_ERROR
+......
+
+
+//---------------------------------------------
+step-3 : create action(s) by action creator(s) / operations
+//---------------------------------------------
+
+
+e.g function loadItems(food,10){
+    //...............................
+    return {type:LOAD_ITEMS_SUCCESS,[]}  // Action
+}
+
+
+
+//---------------------------------------------
+step-4 : process action(s) by reducer(s)  
+         & do state  change
+//---------------------------------------------
+
+e.g  function itemsReducer(state,action){
+    //....
+    return new-state
+}
+
+
+//---------------------------------------------
+step-5 : combine/compose all reducer(s) as root-reducer
+//---------------------------------------------
+
+i.e function composition
+
+
+//---------------------------------------------
+step-6 : create store with root-reducer
+//---------------------------------------------
+
+
+
