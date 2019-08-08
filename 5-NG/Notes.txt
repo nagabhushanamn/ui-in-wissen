@@ -1,0 +1,67 @@
+
+------------------------
+NG project structure
+------------------------
+
+    > NG-module(s)
+
+        => directives , pipes & services
+
+
+---------------------------------------------
+
+A. Directives
+
+    1. component
+            ==> New UI fragment
+
+            <directive></directive>
+
+    2. structural
+            ==> to modify structure of component's template
+
+         syntax:
+          in template,
+
+          <element *directive="expression"/>
+
+          e.g
+
+                *ngIf
+
+    3. attribute
+            ==> to modify component's  attribute  
+
+            <element [directive]="expression"/>   
+
+           e.g
+
+                ngClass         
+
+B. Data-binding
+
+    1. interpolation
+
+        syntax:
+         in template,
+
+                {{expression}}
+
+    2. property
+
+         syntax:
+         in template,
+
+                <element [property]="expression"/>
+
+    3. event
+
+         syntax:
+         in template,
+
+                <element (event)="handler($event)"/>
+
+
+
+
+---------------------------------------------------------    

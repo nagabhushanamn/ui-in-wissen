@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-12 col-sm-10 col-md-10">
+
+    <div class="card">
+      <div class="card-header">Review Form</div>
+      <div class="card-body">
+
+
+        <hr />
+        reviewForm : FormGroup => form model
+        <hr />
+        <pre>
+          {{reviewForm.value|json}}
+        </pre>
+        <hr />
+
+        <hr />
+        reviewForm : FormGroup => status
+        <hr />
+
+        <pre>
+          is pristine  : {{reviewForm.pristine}}
+          is dirty     : {{reviewForm.dirty}}
+
+          is untouched : {{reviewForm.untouched}}
+          is touched   : {{reviewForm.touched}}
+
+          is invalid   : {{reviewForm.invalid}}
+          is valid     : {{reviewForm.valid}}
+
+        </pre>
+
+        <hr />
+        stars : FormControl => status
+        <hr />
+
+        <pre>
+          is pristine  : {{reviewForm.get('stars').pristine}}
+          is dirty     : {{reviewForm.dirty}}
+
+          is untouched : {{reviewForm.get('stars').untouched}}
+          is touched   : {{reviewForm.get('stars').touched}}
+
+          is invalid   : {{reviewForm.get('stars').invalid}}
+          is valid     : {{reviewForm.get('stars').valid}}
+
+        </pre>
+
+        <form [formGroup]="reviewForm">
+          <div class="form-group">
+            <label>Author</label>
+            <input class="form-control" formControlName="author" />
+            <div>{{errorMessages.author}}</div>
+          </div>
+          <div class="form-group">
+            <label>stars</label>
+            <select class="form-control" formControlName="stars">
+              <option *ngFor="let n of [1,2,3,4,5]" [value]="n">{{n}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>body</label>
+            <textarea class="form-control" formControlName="body"></textarea>
+          </div>
+          <button class="btn btn-dark btn-sm">submit</button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>

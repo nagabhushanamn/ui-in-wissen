@@ -1,0 +1,13 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-info">
+  <a class="navbar-brand" href="#">Eat-IT</a>
+</nav>
+<hr />
+<app-cart-badge></app-cart-badge>
+<hr />
+<div class="container">
+  <br />
+  <div *ngFor="let item of items | slice:0:100;let idx=index" class="list-group-item">
+    <app-item [value]="item"></app-item>
+  </div>
+</div>
