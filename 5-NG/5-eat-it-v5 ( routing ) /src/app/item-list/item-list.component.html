@@ -1,0 +1,6 @@
+<div>
+  <div *ngIf="items.length===0">No Items</div>
+  <div class="list-group-item" *ngFor="let item of items">
+    <app-item [value]="item"></app-item>
+  </div>
+</div>

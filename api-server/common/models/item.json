@@ -35,13 +35,5 @@
       "foreignKey": ""
     }
   },
-  "acls": [
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    }
-  ],
   "methods": {}
 }
