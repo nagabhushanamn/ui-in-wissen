@@ -21,8 +21,8 @@ export class AppComponent {
   ]
 
   primaryTodo = {
-    id: 999,
-    title: 'EAT',
+    id: 0,
+    title: 'Live Life',
     completed: false
   }
 

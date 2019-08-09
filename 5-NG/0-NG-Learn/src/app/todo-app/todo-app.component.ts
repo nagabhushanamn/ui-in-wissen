@@ -7,44 +7,59 @@ import { TodoComponent } from '../todo/todo.component';
   templateUrl: './todo-app.component.html',
   styleUrls: ['./todo-app.component.css']
 })
-export class TodoAppComponent implements OnInit {
+export class TodoAppComponent {
 
-  todo: Todo = new Todo('item-1')
+  todos: Todo[] = []
+  todo = new Todo("learn")
 
   constructor() { }
 
-  //@ViewChild(TodoComponent) todoViewChild: TodoComponent
+
+
   @ContentChild(TodoComponent) todoContentChild: TodoComponent;
 
+  // @ViewChild(TodoComponent) todoViewChild: TodoComponent
   @ViewChildren(TodoComponent) todoViewChildren: QueryList<TodoComponent>;
   @ViewChild("header") headerEl: ElementRef;
 
 
 
-  ngOnInit() {
-    console.log('TodoApp :: ngOnInit()')
-    /*
-    setTimeout(() => {
-      this.todo = new Todo('item-one') // immutable
-      //this.todo.completed = true // mutable
-      setTimeout(() => {
-        this.todo = null;
-      }, 3000)
-    }, 3000)
-    */
+  // ngOnInit() {
+  //   console.log('TodoApp :: ngOnInit()')
+  // }
+
+  ngAfterContentInit() {
+    console.log('TodoApp :: ngAfterContentInit() ')
+    console.log(this.todoContentChild)
+    //...
+  }
+
+  ngAfterContentChecked() {
+    console.log("TodoApp :: ngAfterContentChecked");
   }
 
   ngAfterViewInit() {
     console.log('TodoApp :: ngAfterViewInit() ')
     console.dir(this.todoViewChildren)
     console.dir(this.headerEl)
-    if (this.todoViewChildren.length === 1)
-      this.headerEl.nativeElement.textContent = "Todo"
-
+    // if (this.todoViewChildren.length === 1)
+    //   this.headerEl.nativeElement.textContent = "Todo"
   }
 
-  ngAfterContentInit() {
-    console.log('TodoApp :: ngAfterContentInit() ')
-    console.log(this.todoContentChild)
+  ngAfterViewChecked() {
+    console.log("TodoApp :: ngAfterViewChecked");
+    if (this.todoViewChildren.length > 0)
+      this.headerEl.nativeElement.textContent = "Todos"
   }
+
+
+  addTodo() {
+    this.todos.unshift(new Todo('item'))
+  }
+
+
+  clearTodos() {
+    this.todos = []
+  }
+
 }

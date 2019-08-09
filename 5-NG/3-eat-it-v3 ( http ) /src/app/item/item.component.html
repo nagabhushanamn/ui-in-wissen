@@ -3,7 +3,7 @@
     <img [src]="item.imgPath" [alt]="item.name" class="img-fluid" />
   </div>
   <div class="col-9 com-sm-9 col-md-9">
-    <div appHighlight>
+    <div>
       <h5>{{item.name|uppercase}} <small>{{item.makeDate|date:'dd-MMM hh:mm a'}}</small></h5>
       <h6>{{item.price | priceDiscount:item.discount | currency:item.currencyCode:'symbol'}}</h6>
       <button (click)="handleBuy($event)" *ngIf="item.canBuy" class="btn btn-sm btn-dark">buy</button>

@@ -9,7 +9,6 @@ import { ReviewComponent } from './review/review.component';
 import { CartBadgeComponent } from './cart-badge/cart-badge.component';
 import { CartViewComponent } from './cart-view/cart-view.component';
 import { PriceDiscountPipe } from './price-discount.pipe';
-import { HighlightDirective } from './highlight.directive';
 import { AuthTokenInterceptorService } from './auth-token-interceptor.service';
 
 @NgModule({
@@ -20,10 +19,9 @@ import { AuthTokenInterceptorService } from './auth-token-interceptor.service';
     CartBadgeComponent,
     CartViewComponent,
     PriceDiscountPipe,
-    HighlightDirective
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule
   ],
   providers: [

@@ -1,0 +1,10 @@
+
+
+
+
+
+
+# display icons
+https://expo.github.io/vector-icons/
+
+
