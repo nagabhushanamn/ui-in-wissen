@@ -4,9 +4,11 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { buy } from '../actions/cart'
 
+import { selectCart } from '../reducers'
+
 let total = 0.0;
 
-function renderCartItems(cart,buy) {
+function renderCartItems(cart, buy) {
     total = 0.0;
     let keys = Object.keys(cart);
     return keys.map((key, idx) => {
@@ -17,9 +19,9 @@ function renderCartItems(cart,buy) {
             <tr key={idx}>
                 <td>{item.name}</td>
                 <td>&#8377;{item.price}</td>
-                <td><span className="badge badge-dark"><i onClick={e=>buy(item,1)} className="fa fa-plus"></i></span></td>
+                <td><span className="badge badge-dark"><i onClick={e => buy(item, 1)} className="fa fa-plus"></i></span></td>
                 <td>{qty}</td>
-                <td><span className="badge badge-dark"><i onClick={e=>buy(item,-1)} className="fa fa-minus"></i></span></td>
+                <td><span className="badge badge-dark"><i onClick={e => buy(item, -1)} className="fa fa-minus"></i></span></td>
                 <td>&#8377;{item.price * qty}</td>
             </tr>
         )
@@ -53,7 +55,7 @@ const CartView = (props) => {
 
 const mapStateToProps = state => {
     return {
-        cart: state.cart
+        cart: selectCart(state)
     }
 }
 const mapDispatchToProps = { buy }

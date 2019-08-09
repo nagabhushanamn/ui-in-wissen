@@ -7,6 +7,9 @@ import { loadReviews, addNewReview } from '../actions/reviews'
 import { buy } from '../actions/cart'
 import { connect } from 'react-redux'
 
+import { selectItemQty, selectItemReviews } from '../reducers'
+
+
 class Item extends Component {
     state = {
         currentTab: 1,
@@ -104,12 +107,9 @@ class Item extends Component {
 const mapStateToProps = (state, props) => {
     let { value: item } = props;
     let { id } = item;
-    let cartLine = state.cart[id] || {}
-    let { qty } = cartLine;
-    qty = qty || 0
     return {
-        reviews: state.reviews[id] || [],
-        qty
+        reviews: selectItemReviews(state, id),
+        qty: selectItemQty(state, id)
     }
 }
 const mapDispatchToProps = { loadReviews, addNewReview, buy }

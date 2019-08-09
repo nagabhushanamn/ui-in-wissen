@@ -21,7 +21,7 @@ import { AuthTokenInterceptorService } from './auth-token-interceptor.service';
     PriceDiscountPipe,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({appId:'eat-it-v1'}),
     HttpClientModule
   ],
   providers: [
